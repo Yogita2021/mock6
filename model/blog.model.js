@@ -9,7 +9,7 @@ const blogSchema = new mongoose.Schema({
     enum: ["Business", "Tech", "Lifestyle", "Entertainment"],
   },
   date: { type: Date, default: Date.now() },
-  likes: { type: Number },
+  likes: { type: Number, default: 0 },
   comments: [{ username: String, content: String }],
   userID: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
 });
